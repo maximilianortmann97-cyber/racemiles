@@ -1,0 +1,44 @@
+/* HEUTE FINANZIELL FREI | RACE MILES – Abschlussdesign, Gold & Dunkelblau */
+:root{color-scheme:dark;--night:#000c44;--deep:#020817;--gold:#ffbd59;--gold-light:#ffdc97;--gold-dark:#ad7128;--text:#f8f7f5;--muted:#d3d4de;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+html{background:var(--deep)}body{margin:0;min-height:100vh;color:var(--text)}
+.site{min-height:100vh;position:relative;isolation:isolate;display:flex;flex-direction:column;overflow:hidden}
+.hero-background{position:fixed;inset:0;z-index:-3;background:#030b20 url('race-miles-racetrack-desktop.webp?v=1-2') center top/cover no-repeat}
+.site::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(180deg,rgba(0,5,21,.22) 0%,rgba(0,6,27,.05) 29%,rgba(0,6,26,.15) 53%,rgba(0,7,28,.62) 100%)}
+.topbar{width:min(1360px,calc(100% - 80px));margin:0 auto;padding-top:25px;display:flex;align-items:center;justify-content:flex-start}
+.identity{display:block;line-height:0;border-radius:8px}
+.identity img{display:block;width:174px;height:auto;max-height:74px;object-fit:contain}
+.identity:focus-visible,.footer a:focus-visible{outline:3px solid var(--gold);outline-offset:5px}
+.main{width:min(920px,calc(100% - 40px));margin:0 auto;flex:1;padding:clamp(170px,25vh,265px) 0 66px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center}
+h1{margin:0 0 22px;font-size:clamp(34px,4.8vw,65px);letter-spacing:-.055em;line-height:1.07;font-weight:850;text-shadow:0 2px 30px rgba(0,5,20,.75)}h1 span{color:var(--gold);display:block;white-space:nowrap;text-shadow:0 0 28px rgba(255,189,89,.18)}
+.tracker{width:min(610px,100%);border-radius:22px;border:1px solid rgba(255,189,89,.40);background:linear-gradient(145deg,rgba(4,17,49,.66),rgba(0,9,35,.68));box-shadow:0 22px 85px rgba(0,2,14,.55),inset 0 1px 0 rgba(255,218,161,.14);padding:25px 30px 23px;backdrop-filter:blur(8px) saturate(112%);-webkit-backdrop-filter:blur(8px) saturate(112%);text-align:left}
+.tracker-title-row{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.tracker h2{margin:0;font-size:15px;color:#f7f4ef;font-weight:750}
+.status-pill{display:inline-flex;align-items:center;gap:7px;color:#d5d9e5;border:1px solid rgba(255,205,126,.20);border-radius:99px;background:rgba(2,9,27,.32);padding:7px 9px;font-size:11px;white-space:nowrap}
+.status-pill i{display:block;border-radius:50%;width:7px;height:7px;background:#ffca79;flex:none}.status-pill.is-live i{background:#32d4a0}.status-pill.is-error i{background:#ff858b}
+.remaining{font-weight:850;color:var(--gold);letter-spacing:-.067em;font-size:clamp(62px,7vw,86px);line-height:1.12;margin:13px 0 0;display:flex;align-items:baseline;justify-content:center;gap:12px;font-variant-numeric:tabular-nums;text-shadow:0 0 23px rgba(255,189,89,.20)}
+.rm-unit{font-size:22px;letter-spacing:0;color:#fff;font-weight:750}.goal-banner{color:#a9ffd6;text-align:center;font-size:12px;margin:4px 0 0}.goal-banner[hidden]{display:none}
+.progress-top{display:flex;justify-content:space-between;gap:12px;font-size:13px;margin-top:18px;margin-bottom:9px;color:#e4e5ed}.progress-top strong{color:var(--gold-light);font-variant-numeric:tabular-nums}
+.progress-track{height:13px;border-radius:90px;background:rgba(255,255,255,.17);overflow:hidden;border:1px solid rgba(255,255,255,.11)}.progress-fill{height:100%;width:0%;border-radius:90px;background:linear-gradient(90deg,var(--gold-dark),var(--gold),var(--gold-light));box-shadow:0 0 24px rgba(255,189,89,.45);transition:width .6s ease}.progress-range{display:flex;justify-content:space-between;color:#bdc3d3;font-size:12px;margin-top:9px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:21px}.stat{background:rgba(7,21,53,.45);border:1px solid rgba(255,220,151,.17);border-radius:13px;padding:16px}.stat-label{font-size:12px;color:#d3d7e2;margin-bottom:7px}.stat-value{font-size:clamp(25px,3vw,31px);font-weight:780;letter-spacing:-.04em;font-variant-numeric:tabular-nums}.stat-value small{font-size:12px;color:#d8d8df;letter-spacing:0}
+.refresh{border:1px solid rgba(255,220,151,.65);background:linear-gradient(110deg,#c38b35,var(--gold),#ffdc93);color:#142039;width:100%;min-height:51px;display:flex;justify-content:center;align-items:center;gap:10px;cursor:pointer;font-weight:850;border-radius:12px;margin-top:20px;font-size:14px;box-shadow:0 5px 22px rgba(255,189,89,.15);transition:transform .15s,filter .15s}.refresh:hover{filter:brightness(1.07);transform:translateY(-1px)}.refresh:focus-visible{outline:3px solid #fff;outline-offset:3px}.refresh:disabled{cursor:wait;opacity:.78;transform:none}.refresh:disabled svg{animation:spin .85s linear infinite}
+.updated{text-align:center;color:#d8d6df;font-size:11px;margin-top:12px;min-height:16px}
+.footer{width:min(920px,calc(100% - 40px));margin:0 auto;padding:10px 0 22px;display:flex;justify-content:center;border-top:1px solid rgba(255,221,163,.24);font-size:12px}.footer a{color:#fff0d7;text-decoration:none}.footer a:hover{color:var(--gold)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(min-width:1250px) and (max-height:850px){.main{padding-top:clamp(130px,20vh,185px)}}
+@media(max-width:700px){
+  .hero-background{background-image:url('race-miles-racetrack-mobile.webp?v=1-2');background-position:center top;background-size:100% auto;background-color:#010820}
+  .site::before{background:linear-gradient(180deg,rgba(1,7,25,.04) 0%,rgba(1,7,25,.05) 29%,rgba(1,7,25,.25) 45%,rgba(1,7,25,.70) 100%)}
+  .topbar{width:calc(100% - 34px);padding-top:14px}.identity img{width:125px;max-height:55px}
+  .main{width:calc(100% - 30px);padding:clamp(230px,31vh,310px) 0 46px}
+  h1{font-size:clamp(37px,10.4vw,58px);margin-bottom:22px;line-height:1.05}
+  .tracker{border-radius:19px;padding:20px 16px 19px;background:linear-gradient(155deg,rgba(3,14,40,.73),rgba(0,10,34,.77));backdrop-filter:blur(7px) saturate(108%);-webkit-backdrop-filter:blur(7px) saturate(108%)}
+  .tracker h2{font-size:13px}.status-pill{font-size:10px;padding:6px 7px}
+  .remaining{font-size:clamp(47px,12.3vw,71px);gap:8px}.rm-unit{font-size:18px}
+  .progress-top{font-size:12px;margin-top:19px}.progress-range{font-size:11px}
+  .stats{gap:10px}.stat{padding:13px 11px}.stat-value{font-size:clamp(21px,5.7vw,30px)}.stat-value small{font-size:11px}
+  .refresh{font-size:13px}.footer{padding-bottom:24px}
+}
+@media(max-width:365px){.tracker-title-row{align-items:flex-start;flex-direction:column}.main{padding-top:235px}h1{font-size:36px}.remaining{font-size:47px}}
+@media(prefers-reduced-motion:reduce){.progress-fill,.refresh{transition:none}.refresh:disabled svg{animation:none}}
+[hidden]{display:none!important}
